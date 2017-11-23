@@ -8,7 +8,7 @@ function fix {
   printf "\n\n"
 
   git add .;
-  git commit -a --fixup=$HASH
+  git commit -a -n --fixup=$HASH
 
   EDITOR=true git rebase -i --autosquash HEAD~4
 }
