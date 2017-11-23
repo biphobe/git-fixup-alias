@@ -1,3 +1,4 @@
+#!/bin/bash
 COMMITS=$(git log --oneline -9)
 
 function fix { 
