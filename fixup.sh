@@ -8,9 +8,9 @@ function fix {
   printf "\n\n"
 
   git add .;
-  git commit -a -n --fixup=$HASH
+  git commit -an --fixup=$HASH
 
-  EDITOR=true git rebase -i --autosquash HEAD~4
+  EDITOR=true git rebase -i --autosquash --root
 }
 
 printf "Pick commit to fix:\n\n"
