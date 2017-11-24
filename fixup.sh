@@ -10,7 +10,7 @@ function fix {
   git add .;
   git commit -an --fixup=$HASH
 
-  EDITOR=true git rebase -i --autosquash --root
+  EDITOR=true git rebase -i --autosquash HEAD~$(($1+1))
 }
 
 printf "Pick commit to fix:\n\n"
