@@ -7,8 +7,7 @@ function fix {
 
   printf "\n\n"
 
-  git add .;
-  git commit -an --fixup=$HASH
+  git commit -n --fixup=$HASH
 
   EDITOR=true git rebase -i --autosquash HEAD~$(($1+1))
 }
@@ -26,4 +25,3 @@ read -p "Well?" -n 1 -r
 case $REPLY in
   *) fix $REPLY;;
 esac
-
